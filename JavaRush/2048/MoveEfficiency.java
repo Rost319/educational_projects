@@ -1,6 +1,6 @@
 package com.javarush.task.task35.task3513;
 
-public class MoveEfficiency implements Comparable<MoveEfficiency> {
+class MoveEfficiency implements Comparable<MoveEfficiency> {
     private int numberOfEmptyTiles;
     private int score;
     private Move move;
@@ -11,17 +11,23 @@ public class MoveEfficiency implements Comparable<MoveEfficiency> {
         this.move = move;
     }
 
-    public Move getMove() {
-        return move;
-    }
-
     @Override
     public int compareTo(MoveEfficiency o) {
-        int rez = (this.numberOfEmptyTiles > o.numberOfEmptyTiles ? 1 : this.numberOfEmptyTiles < o.numberOfEmptyTiles ? -1 : 0);
-
-        if(rez == 0){
-          rez = (this.score > o.score ? 1 : this.score < o.score ? -1 : 0);
+        if (numberOfEmptyTiles > o.numberOfEmptyTiles) {
+            return 1;
+        } else if (numberOfEmptyTiles < o.numberOfEmptyTiles) {
+            return -1;
+        } else {
+            if (score > o.score) {
+                return 1;
+            } else if (score < o.score) {
+                return -1;
+            }
         }
-        return rez;
+        return 0;
+    }
+
+    public Move getMove() {
+        return move;
     }
 }
