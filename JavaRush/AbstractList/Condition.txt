@@ -7,13 +7,14 @@
  
 Для начала сделаем наше дерево потомком класса AbstractList с параметром типа String, а также реализуем интерфейсы Cloneable и Serializable.
 Реализацию методов get(int index) и size() пока оставь стандартной.
+
 Требования:
-•	•
-Класс CustomTree должен поддерживать интерфейс Cloneable.
-•	•
-Класс CustomTree должен поддерживать интерфейс Serializable.
-•	•
-Класс CustomTree должен быть потомком класса AbstractList<String>.
+
+•	Класс CustomTree должен поддерживать интерфейс Cloneable.
+
+•	Класс CustomTree должен поддерживать интерфейс Serializable.
+
+•	Класс CustomTree должен быть потомком класса AbstractList<String>.
 
 
 
@@ -29,21 +30,22 @@ public String remove(int index)
 public List<String> subList(int fromIndex, int toIndex)
 protected void removeRange(int fromIndex, int toIndex)
 public boolean addAll(int index, Collection<? extends String> c)
+
 Требования:
-•	•
-При попытке вызвать метод get(int index) должно возникать исключение типа UnsupportedOperationException.
-•	•
-При попытке вызвать метод set(int index, String element) должно возникать исключение типа UnsupportedOperationException.
-•	•
-При попытке вызвать метод add(int index, String element) должно возникать исключение типа UnsupportedOperationException.
-•	•
-При попытке вызвать метод String remove(int index) должно возникать исключение типа UnsupportedOperationException.
-•	•
-При попытке вызвать метод subList(int fromIndex, int toIndex) должно возникать исключение типа UnsupportedOperationException.
-•	•
-При попытке вызвать метод removeRange(int fromIndex, int toIndex) должно возникать исключение типа UnsupportedOperationException.
-•	•
-При попытке вызвать метод addAll(int index, Collection<? extends String> c) должно возникать исключение типа UnsupportedOperationException.
+
+•	При попытке вызвать метод get(int index) должно возникать исключение типа UnsupportedOperationException.
+
+•	При попытке вызвать метод set(int index, String element) должно возникать исключение типа UnsupportedOperationException.
+
+•	При попытке вызвать метод add(int index, String element) должно возникать исключение типа UnsupportedOperationException.
+
+•	При попытке вызвать метод String remove(int index) должно возникать исключение типа UnsupportedOperationException.
+
+•	При попытке вызвать метод subList(int fromIndex, int toIndex) должно возникать исключение типа UnsupportedOperationException.
+
+•	При попытке вызвать метод removeRange(int fromIndex, int toIndex) должно возникать исключение типа UnsupportedOperationException.
+
+•	При попытке вызвать метод addAll(int index, Collection<? extends String> c) должно возникать исключение типа UnsupportedOperationException.
 
 
 
@@ -60,27 +62,28 @@ public boolean addAll(int index, Collection<? extends String> c)
 - установи поле availableToAddLeftChildren равным true;
 - установи поле availableToAddRightChildren равным true;
 5. Реализуй публичный метод boolean isAvailableToAddChildren, возвращающий дизъюнкцию полей availableToAddLeftChildren и availableToAddRightChildren.
+
 Требования:
-•	•
-Класс CustomTree.Entry должен быть объявлен с модификатором доступа по умолчанию.
-•	•
-Класс CustomTree.Entry должен поддерживать интерфейс Serializable.
-•	•
-В классе CustomTree.Entry должно существовать поле elementName типа String.
-•	•
-В классе CustomTree.Entry должно существовать поле availableToAddLeftChildren типа boolean.
-•	•
-В классе CustomTree.Entry должно существовать поле availableToAddRightChildren типа boolean.
-•	•
-В классе CustomTree.Entry должно существовать поле parent типа Entry.
-•	•
-В классе CustomTree.Entry должно существовать поле leftChild типа Entry.
-•	•
-В классе CustomTree.Entry должно существовать поле rightChild типа Entry.
-•	•
-В классе CustomTree.Entry должен быть корректно реализован конструктор с одним параметром типа String (смотри условие).
-•	•
-В классе CustomTree.Entry должен корректно реализован метод isAvailableToAddChildren (смотри условие).
+
+•	Класс CustomTree.Entry должен быть объявлен с модификатором доступа по умолчанию.
+
+•	Класс CustomTree.Entry должен поддерживать интерфейс Serializable.
+
+•	В классе CustomTree.Entry должно существовать поле elementName типа String.
+
+•	В классе CustomTree.Entry должно существовать поле availableToAddLeftChildren типа boolean.
+
+•	В классе CustomTree.Entry должно существовать поле availableToAddRightChildren типа boolean.
+
+•	В классе CustomTree.Entry должно существовать поле parent типа Entry.
+
+•	В классе CustomTree.Entry должно существовать поле leftChild типа Entry.
+
+•	В классе CustomTree.Entry должно существовать поле rightChild типа Entry.
+
+•	В классе CustomTree.Entry должен быть корректно реализован конструктор с одним параметром типа String (смотри условие).
+
+•	В классе CustomTree.Entry должен корректно реализован метод isAvailableToAddChildren (смотри условие).
 
 
 1.4. Любое дерево начинается с корня, поэтому не забудь в класс CustomTree добавить поле root типа Entry<String> c модификатором доступа по умолчанию.
@@ -95,15 +98,16 @@ public boolean addAll(int index, Collection<? extends String> c)
 2) переопределить метод size() - возвращает текущее количество элементов в дереве.
 3) реализовать метод getParent(String s) - возвращает имя родителя элемента дерева, имя которого было полученного в качестве параметра.
 Если необходимо, можешь вводить дополнительные методы и поля, не указанные в задании.
+
 Требования:
-•	•
-В классе CustomTree должно существовать поле root типа Entry.
-•	•
-В классе CustomTree должны быть переопределены методы add(String s) и size().
-•	•
-После добавления N элементов в дерево с помощью метода add, метод size должен возвращать N.
-•	•
-Метод getParent должен возвращать имя родителя для любого элемента дерева.
+
+•	В классе CustomTree должно существовать поле root типа Entry.
+
+•	В классе CustomTree должны быть переопределены методы add(String s) и size().
+
+•	После добавления N элементов в дерево с помощью метода add, метод size должен возвращать N.
+
+•	Метод getParent должен возвращать имя родителя для любого элемента дерева.
 
 
 
@@ -115,12 +119,13 @@ public boolean addAll(int index, Collection<? extends String> c)
  
 Что будет если удалить из дерева элементы "3", "4", "5" и "6", а затем попытаемся добавить новый елемент?
 В таком случае элементы "1" и "2" должны восстановить возможность иметь потомков (возможно придется внести изменения в метод add()).
+
 Требования:
-•	•
-После удаления последнего добавленного элемента из дерева с помощью метода remove, метод size должен возвращать N-1.
-•	•
-После удаления второго элемента добавленного в дерево, метод size должен возвращать N/2 + 1 (для случаев где N > 2 и является степенью двойки), N - размер дерева до удаления.
-•	•
-Если переданный объект не является строкой, метод remove() должен бросить UnsupportedOperationException.
-•	•
-Если ни один элемент не способен иметь потомков, необходимо восстановить такую возможность.
+
+•	После удаления последнего добавленного элемента из дерева с помощью метода remove, метод size должен возвращать N-1.
+
+•	После удаления второго элемента добавленного в дерево, метод size должен возвращать N/2 + 1 (для случаев где N > 2 и является степенью двойки), N - размер дерева до удаления.
+
+•	Если переданный объект не является строкой, метод remove() должен бросить UnsupportedOperationException.
+
+•	Если ни один элемент не способен иметь потомков, необходимо восстановить такую возможность.
