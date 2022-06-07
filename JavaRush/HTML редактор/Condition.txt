@@ -13,23 +13,24 @@
 1.6. Добавь в класс View поле Controller controller.
 1.7. Добавь в класс View сеттер и геттер для поля controller.
 1.8. Добавь пустую реализацию метода, который объявлен в интерфейсе ActionListener.
+
 Требования:
-•	•
-Класс Controller должен быть создан в отдельном файле.
-•	•
-Класс View должен быть создан в отдельном файле.
-•	•
-Класс View должен быть унаследован от JFrame и реализовывать интерфейс ActionListener.
-•	•
-В классе Controller должны быть приватные поля: View view, HTMLDocument document, File currentFile.
-•	•
-В классе Controller должен быть создан метод public static void main (String[] args).
-•	•
-Класс Controller должен содержать конструктор с одним параметром, инициализирующий поле view.
-•	•
-В классе View должно быть приватное поле Controller controller, а также сеттер и геттер к нему.
-•	•
-В классе View должен быть метод public void actionPerformed(ActionEvent e).
+
+•	Класс Controller должен быть создан в отдельном файле.
+
+•	Класс View должен быть создан в отдельном файле.
+
+•	Класс View должен быть унаследован от JFrame и реализовывать интерфейс ActionListener.
+
+•	В классе Controller должны быть приватные поля: View view, HTMLDocument document, File currentFile.
+
+•	В классе Controller должен быть создан метод public static void main (String[] args).
+
+•	Класс Controller должен содержать конструктор с одним параметром, инициализирующий поле view.
+
+•	В классе View должно быть приватное поле Controller controller, а также сеттер и геттер к нему.
+
+•	В классе View должен быть метод public void actionPerformed(ActionEvent e).
 
 
 8.2. 2.1. Добавь в контроллер и представление по методу init(), пока без реализаций. Они будут отвечать за инициализацию контроллера и представления.
@@ -43,17 +44,18 @@
 2.3. Добавь в контроллер метод exit(), он должен вызывать статический метод exit у класса System с параметром 0.
 2.3.1. Метод exit в классе Controller не должен быть статическим.
 2.4. Добавь в представление метод exit(), он должен вызывать exit() у контроллера.
+
 Требования:
-•	•
-Класс Controller должен содержать метод public void init().
-•	•
-Класс View должен содержать метод public void init().
-•	•
-Класс Controller должен реализовывать метод public void exit().
-•	•
-Класс View должен реализовывать метод public void exit().
-•	•
-Реализуй, согласно условию, метод public static void main(String[] args) у класса Controller.
+
+•	Класс Controller должен содержать метод public void init().
+
+•	Класс View должен содержать метод public void init().
+
+•	Класс Controller должен реализовывать метод public void exit().
+
+•	Класс View должен реализовывать метод public void exit().
+
+•	Реализуй, согласно условию, метод public static void main(String[] args) у класса Controller.
 
 
 
@@ -70,21 +72,22 @@
 3.2.2. Иметь поле View view.
 3.2.3. В конструкторе принимать View и инициализировать внутреннее поле.
 3.2.4. Иметь переопределенный метод windowClosing(WindowEvent windowEvent), который должен вызывать exit() у представления.
+
 Требования:
-•	•
-Класс View должен содержать приватное проинициализированое поле JTabbedPane tabbedPane.
-•	•
-Класс View должен содержать приватное проинициализированое поле JTextPane htmlTextPane.
-•	•
-Класс View должен содержать приватное проинициализированое поле JEditorPane plainTextPane.
-•	•
-Класс FrameListener должен быть создан в отдельном файле.
-•	•
-Класс FrameListener должен содержать приватное поле View view.
-•	•
-Класс FrameListener должен содержать конструктор с одним параметром, инициализирующий поле view.
-•	•
-В классе FrameListener должен быть метод windowClosing(WindowEvent windowEvent).
+
+•	Класс View должен содержать приватное проинициализированое поле JTabbedPane tabbedPane.
+
+•	Класс View должен содержать приватное проинициализированое поле JTextPane htmlTextPane.
+
+•	Класс View должен содержать приватное проинициализированое поле JEditorPane plainTextPane.
+
+•	Класс FrameListener должен быть создан в отдельном файле.
+
+•	Класс FrameListener должен содержать приватное поле View view.
+
+•	Класс FrameListener должен содержать конструктор с одним параметром, инициализирующий поле view.
+
+•	В классе FrameListener должен быть метод windowClosing(WindowEvent windowEvent).
 
 
 8.4. 4.1. Объяви методы initMenuBar() и initEditor() в классе View. Они будут отвечать за инициализацию меню и панелей редактора.
@@ -97,15 +100,16 @@
 В качестве метода для добавления подписчика используй подходящий метод из класса Window, от которого наследуется и наш класс через классы JFrame и Frame.
 4.3.3. Показывать наше окно. Используй метод setVisible с правильным параметром.
 На этом этапе приложение при запуске должно показывать окно, которое можно растягивать, разворачивать, закрыть и т.д.
+
 Требования:
-•	•
-Класс View должен содержать метод public void initMenuBar().
-•	•
-Класс View должен содержать метод public void initEditor().
-•	•
-Класс View должен реализовывать метод public void initGui().
-•	•
-Реализуй метод init() класса View, согласно заданию.
+
+•	Класс View должен содержать метод public void initMenuBar().
+
+•	Класс View должен содержать метод public void initEditor().
+
+•	Класс View должен реализовывать метод public void initGui().
+
+•	Реализуй метод init() класса View, согласно заданию.
 
 
 8.5. 5.1. Объяви класс TabbedPaneChangeListener реализующий интерфейс ChangeListener в пакете listeners. Этот класс будет слушать и обрабатывать изменения состояния панели вкладок.
@@ -114,21 +118,22 @@
 5.1.2. Переопредели метод из интерфейса ChangeListener, он должен вызывать метод selectedTabChanged() у представления. Последнего метода еще нет, сделай для него заглушку.
 5.2. Объяви класс ExceptionHandler. Это будет наш обработчик исключительных ситуаций, который ты в дальнейшем сможешь переопределить.
 Пока добавь в него статический метод log(Exception e), который будет выводить в консоль краткое описание проблемы (используй метод toString у переданного исключения).
+
 Требования:
-•	•
-Класс View должен содержать метод public void selectedTabChanged().
-•	•
-Класс TabbedPaneChangeListener должен быть создан в отдельном файле.
-•	•
-Класс TabbedPaneChangeListener должен содержать поле View view.
-•	•
-Класс TabbedPaneChangeListener должен содержать конструктор с одним параметром, инициализирующий поле view.
-•	•
-Класс TabbedPaneChangeListener должен содержать метод public void stateChanged(ChangeEvent e).
-•	•
-Класс ExceptionHandler должен быть создан в отдельном файле.
-•	•
-Класс ExceptionHandler должен содержать метод public static void log(Exception e).
+
+•	Класс View должен содержать метод public void selectedTabChanged().
+
+•	Класс TabbedPaneChangeListener должен быть создан в отдельном файле.
+
+•	Класс TabbedPaneChangeListener должен содержать поле View view.
+
+•	Класс TabbedPaneChangeListener должен содержать конструктор с одним параметром, инициализирующий поле view.
+
+•	Класс TabbedPaneChangeListener должен содержать метод public void stateChanged(ChangeEvent e).
+
+•	Класс ExceptionHandler должен быть создан в отдельном файле.
+
+•	Класс ExceptionHandler должен содержать метод public static void log(Exception e).
 
 
 8.6. Реализуй метод инициализации панелей редактора initEditor(). Он должен:
@@ -144,23 +149,24 @@
 Получить панель контента текущего фрейма можно с помощью метода getContentPane(), его реализация унаследовалась от JFrame.
 Подумай, метод с какими параметрами необходимо вызвать, чтобы панель с вкладками отображалась по центру панели контента текущего фрейма.
 После запуска приложения можно будет увидеть текущие результаты: две независимые закладки (HTML и Текст), в каждой из которых можно набирать свой текст.
+
 Требования:
-•	•
-В методе initEditor() для компонента htmlTextPane должен устанавливаться тип контента "text/html" через сеттер setContentType.
-•	•
-В методе initEditor() должен создаваться новый локальный компонент JScrollPane через конструктор принимающий htmlTextPane.
-•	•
-В методе initEditor() для компонента tabbedPane должна добавляться вкладка с именем "HTML" и созданным компонентом JScrollPane на базе htmlTextPane.
-•	•
-В методе initEditor() должен создаваться новый локальный компонент JScrollPane через конструктор принимающий plainTextPane.
-•	•
-В методе initEditor() для компонента tabbedPane должна добавляться вкладка с именем "Текст" и созданным компонентом JScrollPane на базе plainTextPane.
-•	•
-В методе initEditor() для компонента tabbedPane должен устанавливаться предпочтительный размер панели, через сеттер setPreferredSize.
-•	•
-В методе initEditor() для компонента tabbedPane должен добавляться слушатель TabbedPaneChangeListener через метод addChangeListener.
-•	•
-Метод initEditor() должен добавлять по центру панели контента текущего фрейма нашу панель с вкладками, через getContentPane().add().
+
+•	В методе initEditor() для компонента htmlTextPane должен устанавливаться тип контента "text/html" через сеттер setContentType.
+
+•	В методе initEditor() должен создаваться новый локальный компонент JScrollPane через конструктор принимающий htmlTextPane.
+
+•	В методе initEditor() для компонента tabbedPane должна добавляться вкладка с именем "HTML" и созданным компонентом JScrollPane на базе htmlTextPane.
+
+•	В методе initEditor() должен создаваться новый локальный компонент JScrollPane через конструктор принимающий plainTextPane.
+
+•	В методе initEditor() для компонента tabbedPane должна добавляться вкладка с именем "Текст" и созданным компонентом JScrollPane на базе plainTextPane.
+
+•	В методе initEditor() для компонента tabbedPane должен устанавливаться предпочтительный размер панели, через сеттер setPreferredSize.
+
+•	В методе initEditor() для компонента tabbedPane должен добавляться слушатель TabbedPaneChangeListener через метод addChangeListener.
+
+•	Метод initEditor() должен добавлять по центру панели контента текущего фрейма нашу панель с вкладками, через getContentPane().add().
 
 
 
@@ -222,29 +228,30 @@
 7.4.5. void initStyleMenu(View view, JMenuBar menuBar) - инициализация меню выбора стиля текста.
 7.4.6. void initEditMenu(View view, JMenuBar menuBar) - инициализация меню редактирования текста.
 7.4.7. void initFileMenu(View view, JMenuBar menuBar) - инициализация меню Файл.
+
 Требования:
-•	•
-Класс MenuHelper должен быть создан в отдельном файле.
-•	•
-Класс MenuHelper должен реализовывать публичный статический метод JMenuItem addMenuItem(JMenu parent, String text, ActionListener actionListener).
-•	•
-Класс MenuHelper должен реализовывать публичный статический метод JMenuItem addMenuItem(JMenu parent, Action action).
-•	•
-Класс MenuHelper должен реализовывать публичный статический метод JMenuItem addMenuItem(JMenu parent, String text, Action action).
-•	•
-Класс MenuHelper должен содержать публичный статический метод void initHelpMenu(View view, JMenuBar menuBar).
-•	•
-Класс MenuHelper должен содержать публичный статический метод void initFontMenu(View view, JMenuBar menuBar).
-•	•
-Класс MenuHelper должен содержать публичный статический метод void initColorMenu(View view, JMenuBar menuBar).
-•	•
-Класс MenuHelper должен содержать публичный статический метод void initAlignMenu(View view, JMenuBar menuBar).
-•	•
-Класс MenuHelper должен содержать публичный статический метод void initStyleMenu(View view, JMenuBar menuBar).
-•	•
-Класс MenuHelper должен содержать публичный статический метод void initEditMenu(View view, JMenuBar menuBar).
-•	•
-Класс MenuHelper должен содержать публичный статический метод void initFileMenu(View view, JMenuBar menuBar).
+
+•	Класс MenuHelper должен быть создан в отдельном файле.
+
+•	Класс MenuHelper должен реализовывать публичный статический метод JMenuItem addMenuItem(JMenu parent, String text, ActionListener actionListener).
+
+•	Класс MenuHelper должен реализовывать публичный статический метод JMenuItem addMenuItem(JMenu parent, Action action).
+
+•	Класс MenuHelper должен реализовывать публичный статический метод JMenuItem addMenuItem(JMenu parent, String text, Action action).
+
+•	Класс MenuHelper должен содержать публичный статический метод void initHelpMenu(View view, JMenuBar menuBar).
+
+•	Класс MenuHelper должен содержать публичный статический метод void initFontMenu(View view, JMenuBar menuBar).
+
+•	Класс MenuHelper должен содержать публичный статический метод void initColorMenu(View view, JMenuBar menuBar).
+
+•	Класс MenuHelper должен содержать публичный статический метод void initAlignMenu(View view, JMenuBar menuBar).
+
+•	Класс MenuHelper должен содержать публичный статический метод void initStyleMenu(View view, JMenuBar menuBar).
+
+•	Класс MenuHelper должен содержать публичный статический метод void initEditMenu(View view, JMenuBar menuBar).
+
+•	Класс MenuHelper должен содержать публичный статический метод void initFileMenu(View view, JMenuBar menuBar).
 
 
 
@@ -261,21 +268,22 @@
 Чем он будет заниматься узнаешь чуть позже.
 8.2.2. TextEditMenuListener. Этот класс также должен реализовывать интерфейс MenuListener.
 Добавь ему конструктор TextEditMenuListener(View view). В следующих заданиях мы рассмотрим его детальнее.
+
 Требования:
-•	•
-Класс UndoAction должен быть создан в отдельном файле.
-•	•
-Класс RedoAction должен быть создан в отдельном файле.
-•	•
-Класс StrikeThroughAction должен быть создан в отдельном файле.
-•	•
-Класс SubscriptAction должен быть создан в отдельном файле.
-•	•
-Класс SuperscriptAction должен быть создан в отдельном файле.
-•	•
-Класс UndoMenuListener должен быть создан в отдельном файле.
-•	•
-Класс TextEditMenuListener должен быть создан в отдельном файле.
+
+•	Класс UndoAction должен быть создан в отдельном файле.
+
+•	Класс RedoAction должен быть создан в отдельном файле.
+
+•	Класс StrikeThroughAction должен быть создан в отдельном файле.
+
+•	Класс SubscriptAction должен быть создан в отдельном файле.
+
+•	Класс SuperscriptAction должен быть создан в отдельном файле.
+
+•	Класс UndoMenuListener должен быть создан в отдельном файле.
+
+•	Класс TextEditMenuListener должен быть создан в отдельном файле.
 
 
 
@@ -287,15 +295,16 @@
 Конструктор не должен кидать исключений, только логировать их с помощью ExceptionHandler.
 Подсказа: для реализации задания используй класс UIManager.
 Запусти приложение, теперь ты должен видеть панель с меню вверху окна. Некоторые из пунктов меню (например: Вырезать, Копировать, Вставить, Стиль (частично), Выравнивание, Цвет, Шрифт) должны уже работать. Убедись, что все работает и только затем продолжи разработку.
+
 Требования:
-•	•
-В методе initMenuBar() должно создаваться новое меню (объект типа JMenuBar).
-•	•
-В методе initMenuBar() c помощью MenuHelper должно быть проинициализировано меню в следующем порядке: Файл, Редактировать, Стиль, Выравнивание, Цвет, Шрифт и Помощь.
-•	•
-В методе initMenuBar() должно добавляться новосозданное меню в верхнюю часть панели контента текущего фрейма, используя метод getContentPane().
-•	•
-В конструкторе класса View, через класс UIManager, должен устанавливаться внешний вид и поведение (look and feel).
+
+•	В методе initMenuBar() должно создаваться новое меню (объект типа JMenuBar).
+
+•	В методе initMenuBar() c помощью MenuHelper должно быть проинициализировано меню в следующем порядке: Файл, Редактировать, Стиль, Выравнивание, Цвет, Шрифт и Помощь.
+
+•	В методе initMenuBar() должно добавляться новосозданное меню в верхнюю часть панели контента текущего фрейма, используя метод getContentPane().
+
+•	В конструкторе класса View, через класс UIManager, должен устанавливаться внешний вид и поведение (look and feel).
 
 
 
@@ -314,21 +323,22 @@
 Подсказка: используй метод setEnabled().
 10.3.3. Аналогично поступи и для пункта меню redoMenuItem, добавив метод-заглушку canRedo() в представление.
 Запусти программу и убедись, что пункты меню Отменить и Вернуть недоступны.
+
 Требования:
-•	•
-Класс UndoMenuListener должен содержать поле представления View view.
-•	•
-Класс UndoMenuListener должен содержать поле JMenuItem undoMenuItem.
-•	•
-Класс UndoMenuListener должен содержать поле JMenuItem redoMenuItem.
-•	•
-Конструктор UndoMenuListener(View view, JMenuItem undoMenuItem, JMenuItem redoMenuItem) должен корректно инициализировать поля класса.
-•	•
-Класс View должен содержать public boolean метод canUndo(), возвращающий false.
-•	•
-Класс View должен содержать public boolean метод canRedo(), возвращающий false.
-•	•
-Метод menuSelected(MenuEvent menuEvent) должен делать доступными или не доступными пункты меню undoMenuItem и redoMenuItem.
+
+•	Класс UndoMenuListener должен содержать поле представления View view.
+
+•	Класс UndoMenuListener должен содержать поле JMenuItem undoMenuItem.
+
+•	Класс UndoMenuListener должен содержать поле JMenuItem redoMenuItem.
+
+•	Конструктор UndoMenuListener(View view, JMenuItem undoMenuItem, JMenuItem redoMenuItem) должен корректно инициализировать поля класса.
+
+•	Класс View должен содержать public boolean метод canUndo(), возвращающий false.
+
+•	Класс View должен содержать public boolean метод canRedo(), возвращающий false.
+
+•	Метод menuSelected(MenuEvent menuEvent) должен делать доступными или не доступными пункты меню undoMenuItem и redoMenuItem.
 
 
 
@@ -346,31 +356,32 @@
 11.5.3. Реализуй методы boolean canUndo() и boolean canRedo() используя undoManager.
 11.5.4. Реализуй геттер для undoListener.
 11.5.5. Добавь и реализуй метод void resetUndo(), который должен сбрасывать все правки в менеджере undoManager.
+
 Требования:
-•	•
-Класс View должен содержать приватное поле UndoManager undoManager, которое должно быть сразу проинициализовано.
-•	•
-Класс View должен содержать приватное поле UndoListener undoListener, которое должно быть сразу проинициализовано через поле undoManager.
-•	•
-Класс View должен содержать геттер к полю UndoListener undoListener.
-•	•
-Класс View должен содержать public void метод undo().
-•	•
-Класс View должен содержать public void метод redo().
-•	•
-Реализация метода canUndo() класса View должна использовать undoManager.
-•	•
-Реализация метода canRedo() класса View должна использовать undoManager.
-•	•
-Класс View должен содержать public void метод resetUndo(), который должен сбрасывать все правки в менеджере undoManager.
-•	•
-Класс UndoListener должен быть создан в отдельном файле.
-•	•
-Класс UndoListener должен содержать приватное поле UndoManager undoManager.
-•	•
-Конструктор UndoListener(UndoManager undoManager) должен корректно инициализировать поле undoManager.
-•	•
-Метод undoableEditHappened(UndoableEditEvent e) в классе UndoListener должен из переданного события получать правку и добавлять ее в undoManager.
+
+•	Класс View должен содержать приватное поле UndoManager undoManager, которое должно быть сразу проинициализовано.
+
+•	Класс View должен содержать приватное поле UndoListener undoListener, которое должно быть сразу проинициализовано через поле undoManager.
+
+•	Класс View должен содержать геттер к полю UndoListener undoListener.
+
+•	Класс View должен содержать public void метод undo().
+
+•	Класс View должен содержать public void метод redo().
+
+•	Реализация метода canUndo() класса View должна использовать undoManager.
+
+•	Реализация метода canRedo() класса View должна использовать undoManager.
+
+•	Класс View должен содержать public void метод resetUndo(), который должен сбрасывать все правки в менеджере undoManager.
+
+•	Класс UndoListener должен быть создан в отдельном файле.
+
+•	Класс UndoListener должен содержать приватное поле UndoManager undoManager.
+
+•	Конструктор UndoListener(UndoManager undoManager) должен корректно инициализировать поле undoManager.
+
+•	Метод undoableEditHappened(UndoableEditEvent e) в классе UndoListener должен из переданного события получать правку и добавлять ее в undoManager.
 
 
 
@@ -383,27 +394,28 @@
 12.3.2. SuperscriptAction
 Запусти программу и убедись, что пункты меню Подстрочный знак, Надстрочный знак и Зачеркнутый работают.
 Пункты, отвечающие за отмену и возврат действия пока не подключены к контроллеру и мы не сможем их проверить.
+
 Требования:
-•	•
-Класс RedoAction должен содержать поле View view.
-•	•
-Конструктор класса RedoAction(View view) должен инициализировать поле view.
-•	•
-Метод actionPerformed(ActionEvent actionEvent) класса RedoAction должен вызывать метод redo() у представления.
-•	•
-Класс UndoAction должен содержать поле View view.
-•	•
-Конструктор класса UndoAction(View view) должен инициализировать поле view.
-•	•
-Метод actionPerformed(ActionEvent actionEvent) класса UndoAction должен вызывать метод undo() у представления.
-•	•
-Конструктор без параметров класса SubscriptAction должен вызывать конструктор суперкласса с параметром StyleConstants.Subscript.
-•	•
-Метод actionPerformed(ActionEvent actionEvent) класса SubscriptAction должен использовать метод setSubscript у StyleConstants с параметрами: SimpleAttributeSet и !StyleConstants.isSubscript(mutableAttributeSet).
-•	•
-Конструктор без параметров класса SuperscriptAction должен вызывать конструктор суперкласса с параметром StyleConstants.Superscript.
-•	•
-Метод actionPerformed(ActionEvent actionEvent) класса SuperscriptAction должен использовать метод setSuperscript у StyleConstants с параметрами: SimpleAttributeSet и !StyleConstants.isSuperscript(mutableAttributeSet).
+
+•	Класс RedoAction должен содержать поле View view.
+
+•	Конструктор класса RedoAction(View view) должен инициализировать поле view.
+
+•	Метод actionPerformed(ActionEvent actionEvent) класса RedoAction должен вызывать метод redo() у представления.
+
+•	Класс UndoAction должен содержать поле View view.
+
+•	Конструктор класса UndoAction(View view) должен инициализировать поле view.
+
+•	Метод actionPerformed(ActionEvent actionEvent) класса UndoAction должен вызывать метод undo() у представления.
+
+•	Конструктор без параметров класса SubscriptAction должен вызывать конструктор суперкласса с параметром StyleConstants.Subscript.
+
+•	Метод actionPerformed(ActionEvent actionEvent) класса SubscriptAction должен использовать метод setSubscript у StyleConstants с параметрами: SimpleAttributeSet и !StyleConstants.isSubscript(mutableAttributeSet).
+
+•	Конструктор без параметров класса SuperscriptAction должен вызывать конструктор суперкласса с параметром StyleConstants.Superscript.
+
+•	Метод actionPerformed(ActionEvent actionEvent) класса SuperscriptAction должен использовать метод setSuperscript у StyleConstants с параметрами: SimpleAttributeSet и !StyleConstants.isSuperscript(mutableAttributeSet).
 
 
 
@@ -418,15 +430,16 @@
 13.3.2. У полученного меню получать список компонентов (пунктов меню).
 13.3.3. Для каждого пункта меню вызывать метод setEnabled, передав в качестве параметра результат вызова метода isHtmlTabSelected() из представления.
 Запусти приложение и убедись, что пункты меню стиль, выравнивание, цвет и шрифт доступны только, когда активна закладка HTML и не доступны для закладки Текст.
+
 Требования:
-•	•
-Класс View должен содержать публичный метод boolean isHtmlTabSelected(), определяющий текущую вкладку.
-•	•
-Класс TextEditMenuListener должен содержать поле View view.
-•	•
-Конструктор класса TextEditMenuListener(View view) должен инициализировать поле view.
-•	•
-Метод menuSelected(MenuEvent menuEvent) класса TextEditMenuListener должен устанавливать доступность пунктов меню стиль, выравнивание, цвет и шрифт в зависимости от выбранной вкладки.
+
+•	Класс View должен содержать публичный метод boolean isHtmlTabSelected(), определяющий текущую вкладку.
+
+•	Класс TextEditMenuListener должен содержать поле View view.
+
+•	Конструктор класса TextEditMenuListener(View view) должен инициализировать поле view.
+
+•	Метод menuSelected(MenuEvent menuEvent) класса TextEditMenuListener должен устанавливать доступность пунктов меню стиль, выравнивание, цвет и шрифт в зависимости от выбранной вкладки.
 
 
 
@@ -436,15 +449,16 @@
 14.2. Добавь в класс контроллера геттер для модели, в нашем случае это поле document.
 14.3. Добавь в представление метод update(), который должен получать документ у контроллера и устанавливать его в панель редактирования htmlTextPane.
 14.4. Добавь в представление метод showAbout(), который должен показывать диалоговое окно с информацией о программе. Информацию придумай сам, а вот тип сообщения должен быть JOptionPane.INFORMATION_MESSAGE.
+
 Требования:
-•	•
-Класс View должен содержать публичный метод selectHtmlTab(), который должен выбирать вкладку и сбрасывать все правки.
-•	•
-Класс Controller должен содержать геттер для поля document.
-•	•
-Класс View должен содержать публичный метод update(), который должен устанавливать документ в панель редактирования.
-•	•
-Класс View должен содержать публичный метод showAbout(), который должен показывать диалоговое окно с информацией о программе.
+
+•	Класс View должен содержать публичный метод selectHtmlTab(), который должен выбирать вкладку и сбрасывать все правки.
+
+•	Класс Controller должен содержать геттер для поля document.
+
+•	Класс View должен содержать публичный метод update(), который должен устанавливать документ в панель редактирования.
+
+•	Класс View должен содержать публичный метод showAbout(), который должен показывать диалоговое окно с информацией о программе.
 
 
 
@@ -456,17 +470,18 @@
 Подсказка: воспользуйся подходящим методом класса HTMLEditorKit.
 15.3. Добавлять новому документу слушателя правок.
 15.4. Вызывать у представления метод update().
+
 Требования:
-•	•
-Класс Controller должен содержать публичный метод resetDocument(), который будет сбрасывать текущий документ.
-•	•
-Метод resetDocument() должен удалять у текущего документа document слушателя правок через метод removeUndoableEditListener().
-•	•
-Метод resetDocument() должен создавать новый документ по умолчанию через метод createDefaultDocument().
-•	•
-Метод resetDocument() должен добавлять новому документу слушателя правок через метод addUndoableEditListener().
-•	•
-Метод resetDocument() должен вызывать у представления метод update().
+
+•	Класс Controller должен содержать публичный метод resetDocument(), который будет сбрасывать текущий документ.
+
+•	Метод resetDocument() должен удалять у текущего документа document слушателя правок через метод removeUndoableEditListener().
+
+•	Метод resetDocument() должен создавать новый документ по умолчанию через метод createDefaultDocument().
+
+•	Метод resetDocument() должен добавлять новому документу слушателя правок через метод addUndoableEditListener().
+
+•	Метод resetDocument() должен вызывать у представления метод update().
 
 
 
@@ -477,17 +492,18 @@
 16.2. Создай новый ридер StringReader на базе переданного текста.
 16.3. Вызови метод read() из класса HTMLEditorKit, который вычитает данные из ридера в документ document.
 16.4. Проследи, чтобы метод не кидал исключения. Их необходимо просто логировать.
+
 Требования:
-•	•
-Класс Controller должен содержать публичный метод setPlainText(String text), который будет записывать переданный текст с html тегами в документ document.
-•	•
-Метод setPlainText(String text) должен сбрасывать документ через метод resetDocument().
-•	•
-Метод setPlainText(String text) должен создавать новый StringReader на базе переданного параметра.
-•	•
-Метод setPlainText(String text) должен вызывать метод read() у объекта HTMLEditorKit.
-•	•
-Если в методе setPlainText(String text) возникнет исключительная ситуация, то исключение должно логироваться через метод log у класса ExceptionHandler.
+
+•	Класс Controller должен содержать публичный метод setPlainText(String text), который будет записывать переданный текст с html тегами в документ document.
+
+•	Метод setPlainText(String text) должен сбрасывать документ через метод resetDocument().
+
+•	Метод setPlainText(String text) должен создавать новый StringReader на базе переданного параметра.
+
+•	Метод setPlainText(String text) должен вызывать метод read() у объекта HTMLEditorKit.
+
+•	Если в методе setPlainText(String text) возникнет исключительная ситуация, то исключение должно логироваться через метод log у класса ExceptionHandler.
 
 
 
@@ -496,17 +512,18 @@
 17.1. Создай объект StringWriter.
 17.2. Перепиши все содержимое из документа document в созданный объект с помощью метода write класса HTMLEditorKit.
 17.3. Как обычно, метод не должен кидать исключений.
+
 Требования:
-•	•
-Класс Controller должен содержать публичный метод String getPlainText().
-•	•
-В методе getPlainText() должен создаваться объект класса StringWriter.
-•	•
-Метод getPlainText() должен вызывать метод write() у объекта HTMLEditorKit.
-•	•
-Если в методе getPlainText() возникнет исключительная ситуация, то исключение должно логироваться через метод log у класса ExceptionHandler.
-•	•
-Метод getPlainText() должен возвращать текст из документа со всеми html тегами.
+
+•	Класс Controller должен содержать публичный метод String getPlainText().
+
+•	В методе getPlainText() должен создаваться объект класса StringWriter.
+
+•	Метод getPlainText() должен вызывать метод write() у объекта HTMLEditorKit.
+
+•	Если в методе getPlainText() возникнет исключительная ситуация, то исключение должно логироваться через метод log у класса ExceptionHandler.
+
+•	Метод getPlainText() должен возвращать текст из документа со всеми html тегами.
 
 
 
@@ -515,15 +532,16 @@
 18.2. Если выбрана вкладка с индексом 0 (html вкладка), значит нам нужно получить текст из plainTextPane и установить его в контроллер с помощью метода setPlainText.
 18.3. Если выбрана вкладка с индексом 1 (вкладка с html текстом), то необходимо получить текст у контроллера с помощью метода getPlainText() и установить его в панель plainTextPane.
 18.4. Сбросить правки (вызвать метод resetUndo представления).
+
 Требования:
-•	•
-Метод selectedTabChanged() должен проверить, какая вкладка сейчас оказалась выбранной.
-•	•
-Если индекс вкладки равен 0 - метод selectedTabChanged() должен получить текст из plainTextPane и установить его в контроллер с помощью метода setPlainText().
-•	•
-Если индекс вкладки равен 1 - метод selectedTabChanged() должен получить текст у контроллера с помощью метода getPlainText() и установить его в панель plainTextPane.
-•	•
-Метод selectedTabChanged() должен сбросить правки.
+
+•	Метод selectedTabChanged() должен проверить, какая вкладка сейчас оказалась выбранной.
+
+•	Если индекс вкладки равен 0 - метод selectedTabChanged() должен получить текст из plainTextPane и установить его в контроллер с помощью метода setPlainText().
+
+•	Если индекс вкладки равен 1 - метод selectedTabChanged() должен получить текст у контроллера с помощью метода getPlainText() и установить его в панель plainTextPane.
+
+•	Метод selectedTabChanged() должен сбросить правки.
 
 
 
@@ -538,21 +556,22 @@
 19.6. Если "Выход" - exit().
 19.7. Если "О программе", то вызови метод showAbout() у представления.
 Проверь, что заработали пункты меню Выход и О программе.
+
 Требования:
-•	•
-Метод actionPerformed(ActionEvent actionEvent) должен получать из события команду с помощью метода getActionCommand().
-•	•
-Если в метод actionPerformed(ActionEvent actionEvent) передано событие с командой "Новый", метод должен вызывать у контроллера createNewDocument().
-•	•
-Если в метод actionPerformed(ActionEvent actionEvent) передано событие с командой "Открыть", метод должен вызывать у контроллера openDocument().
-•	•
-Если в метод actionPerformed(ActionEvent actionEvent) передано событие с командой "Сохранить", метод должен вызывать у контроллера saveDocument().
-•	•
-Если в метод actionPerformed(ActionEvent actionEvent) передано событие с командой "Сохранить как...", метод должен вызывать у контроллера saveDocumentAs().
-•	•
-Если в метод actionPerformed(ActionEvent actionEvent) передано событие с командой "Выход", метод должен вызывать у контроллера exit().
-•	•
-Если в метод actionPerformed(ActionEvent actionEvent) передано событие с командой "О программе", метод должен вызывать у представления showAbout().
+
+•	Метод actionPerformed(ActionEvent actionEvent) должен получать из события команду с помощью метода getActionCommand().
+
+•	Если в метод actionPerformed(ActionEvent actionEvent) передано событие с командой "Новый", метод должен вызывать у контроллера createNewDocument().
+
+•	Если в метод actionPerformed(ActionEvent actionEvent) передано событие с командой "Открыть", метод должен вызывать у контроллера openDocument().
+
+•	Если в метод actionPerformed(ActionEvent actionEvent) передано событие с командой "Сохранить", метод должен вызывать у контроллера saveDocument().
+
+•	Если в метод actionPerformed(ActionEvent actionEvent) передано событие с командой "Сохранить как...", метод должен вызывать у контроллера saveDocumentAs().
+
+•	Если в метод actionPerformed(ActionEvent actionEvent) передано событие с командой "Выход", метод должен вызывать у контроллера exit().
+
+•	Если в метод actionPerformed(ActionEvent actionEvent) передано событие с командой "О программе", метод должен вызывать у представления showAbout().
 
 
 
@@ -565,17 +584,18 @@
 20.2. Реализуй метод инициализации init() контроллера.
 Он должен просто вызывать метод создания нового документа.
 Проверь работу пункта меню Новый.
+
 Требования:
-•	•
-Метод createNewDocument() в контроллере должен выбирать html вкладку у представления.
-•	•
-Метод createNewDocument() в контроллере должен сбрасывать текущий документ.
-•	•
-Метод createNewDocument() в контроллере должен устанавливать новый заголовок окна.
-•	•
-Метод createNewDocument() в контроллере должен обнулить currentFile.
-•	•
-Метод init() в контроллере должен вызывать метод создания нового документа.
+
+•	Метод createNewDocument() в контроллере должен выбирать html вкладку у представления.
+
+•	Метод createNewDocument() в контроллере должен сбрасывать текущий документ.
+
+•	Метод createNewDocument() в контроллере должен устанавливать новый заголовок окна.
+
+•	Метод createNewDocument() в контроллере должен обнулить currentFile.
+
+•	Метод init() в контроллере должен вызывать метод создания нового документа.
 
 
 
@@ -586,17 +606,18 @@
 21.2. Мы хотим, чтобы окно выбора файла отображало только html/htm файлы или папки.
 Переопредели метод accept(File file), чтобы он возвращал true, если переданный файл директория или содержит в конце имени ".html" или ".htm" без учета регистра.
 21.3. Чтобы в окне выбора файла в описании доступных типов файлов отображался текст "HTML и HTM файлы" переопредели соответствующим образом метод getDescription().
+
 Требования:
-•	•
-Класс HTMLFileFilter должен быть создан в отдельном файле.
-•	•
-Класс HTMLFileFilter должен наследоваться от FileFilter.
-•	•
-Метод accept(File f) класса HTMLFileFilter должен возвращать true, если переданный файл - директория или содержит в конце имени ".html" или ".htm" без учета регистра.
-•	•
-Метод accept(File f) класса HTMLFileFilter должен возвращать false, если переданный файл - НЕ директория или НЕ содержит в конце имени ".html" или ".htm" без учета регистра.
-•	•
-Метод getDescription() класса HTMLFileFilter должен возвращать строку "HTML и HTM файлы".
+
+•	Класс HTMLFileFilter должен быть создан в отдельном файле.
+
+•	Класс HTMLFileFilter должен наследоваться от FileFilter.
+
+•	Метод accept(File f) класса HTMLFileFilter должен возвращать true, если переданный файл - директория или содержит в конце имени ".html" или ".htm" без учета регистра.
+
+•	Метод accept(File f) класса HTMLFileFilter должен возвращать false, если переданный файл - НЕ директория или НЕ содержит в конце имени ".html" или ".htm" без учета регистра.
+
+•	Метод getDescription() класса HTMLFileFilter должен возвращать строку "HTML и HTM файлы".
 
 
 
@@ -613,25 +634,26 @@
 22.5.4. Переписывать данные из документа document в объект FileWriter-а аналогично тому, как мы это делали в методе getPlainText().
 22.6. Метод не должен кидать исключения.
 Проверь работу пункта меню Сохранить как...
+
 Требования:
-•	•
-Метод saveDocumentAs() в контроллере должен переключать представление на html вкладку.
-•	•
-Метод saveDocumentAs() в контроллере должен создавать новый объект для выбора файла JFileChooser.
-•	•
-Метод saveDocumentAs() в контроллере должен устанавливать объекту класса JFileChooser в качестве фильтра объект HTMLFileFilter.
-•	•
-Метод saveDocumentAs() в контроллере должен, используя метод showSaveDialog() у JFileChooser показывать диалоговое окно "Save File" для выбора файла.
-•	•
-Метод saveDocumentAs() в контроллере должен сохранять выбранный файл в поле currentFile, если пользователь подтвердит выбор файла.
-•	•
-Метод saveDocumentAs() в контроллере должен устанавливать имя файла в качестве заголовка окна представления, если пользователь подтвердит выбор файла.
-•	•
-Метод saveDocumentAs() в контроллере должен создавать FileWriter на базе currentFile, если пользователь подтвердит выбор файла.
-•	•
-Метод saveDocumentAs() в контроллере должен используя HTMLEditorKit переписывать данные из документа document в объект FileWriter-а, если пользователь подтвердит выбор файла.
-•	•
-Метод saveDocumentAs() в контроллере не должен кидать исключения, а логировать через ExceptionHandler.
+
+•	Метод saveDocumentAs() в контроллере должен переключать представление на html вкладку.
+
+•	Метод saveDocumentAs() в контроллере должен создавать новый объект для выбора файла JFileChooser.
+
+•	Метод saveDocumentAs() в контроллере должен устанавливать объекту класса JFileChooser в качестве фильтра объект HTMLFileFilter.
+
+•	Метод saveDocumentAs() в контроллере должен, используя метод showSaveDialog() у JFileChooser показывать диалоговое окно "Save File" для выбора файла.
+
+•	Метод saveDocumentAs() в контроллере должен сохранять выбранный файл в поле currentFile, если пользователь подтвердит выбор файла.
+
+•	Метод saveDocumentAs() в контроллере должен устанавливать имя файла в качестве заголовка окна представления, если пользователь подтвердит выбор файла.
+
+•	Метод saveDocumentAs() в контроллере должен создавать FileWriter на базе currentFile, если пользователь подтвердит выбор файла.
+
+•	Метод saveDocumentAs() в контроллере должен используя HTMLEditorKit переписывать данные из документа document в объект FileWriter-а, если пользователь подтвердит выбор файла.
+
+•	Метод saveDocumentAs() в контроллере не должен кидать исключения, а логировать через ExceptionHandler.
 
 
 
@@ -650,39 +672,40 @@
 23.2.6. Сбросить правки (вызвать метод resetUndo представления).
 23.2.7. Если возникнут исключения - залогируй их и не пробрасывай наружу.
 Проверь работу пунктов меню Сохранить и Открыть.
+
 Требования:
-•	•
-Метод saveDocument() в контроллере должен переключать представление на html вкладку.
-•	•
-Метод saveDocument() в контроллере должен создавать FileWriter на базе currentFile, если currentFile != null.
-•	•
-Метод saveDocument() в контроллере должен используя HTMLEditorKit переписывать данные из документа document в объект FileWriter-а, если currentFile != null.
-•	•
-Метод saveDocument() в контроллере должен вызывать метод saveDocumentAs(), если currentFile == null.
-•	•
-Метод saveDocument() в контроллере не должен кидать исключения, а логировать через ExceptionHandler.
-•	•
-Метод openDocument() в контроллере должен переключать представление на html вкладку.
-•	•
-Метод openDocument() в контроллере должен создавать новый объект для выбора файла JFileChooser.
-•	•
-Метод openDocument() в контроллере должен устанавливать объекту класса JFileChooser в качестве фильтра объект HTMLFileFilter.
-•	•
-Метод openDocument() в контроллере должен, используя метод showOpenDialog() у JFileChooser показывать диалоговое окно "Open File" для выбора файла.
-•	•
-Метод openDocument() в контроллере должен установить новое значение currentFile, если пользователь подтвердит выбор файла.
-•	•
-Метод openDocument() в контроллере должен сбросить документ, если пользователь подтвердит выбор файла.
-•	•
-Метод openDocument() в контроллере должен устанавливать имя файла в качестве заголовка окна представления, если пользователь подтвердит выбор файла.
-•	•
-Метод openDocument() в контроллере должен создавать FileReader на базе currentFile, если пользователь подтвердит выбор файла.
-•	•
-Метод openDocument() в контроллере должен используя HTMLEditorKit вычитать данные из FileReader-а в документ document, если пользователь подтвердит выбор файла.
-•	•
-Метод openDocument() в контроллере должен сбросить правки, если пользователь подтвердит выбор файла.
-•	•
-Метод openDocument() в контроллере не должен кидать исключения, а логировать через ExceptionHandler.
+
+•	Метод saveDocument() в контроллере должен переключать представление на html вкладку.
+
+•	Метод saveDocument() в контроллере должен создавать FileWriter на базе currentFile, если currentFile != null.
+
+•	Метод saveDocument() в контроллере должен используя HTMLEditorKit переписывать данные из документа document в объект FileWriter-а, если currentFile != null.
+
+•	Метод saveDocument() в контроллере должен вызывать метод saveDocumentAs(), если currentFile == null.
+
+•	Метод saveDocument() в контроллере не должен кидать исключения, а логировать через ExceptionHandler.
+
+•	Метод openDocument() в контроллере должен переключать представление на html вкладку.
+
+•	Метод openDocument() в контроллере должен создавать новый объект для выбора файла JFileChooser.
+
+•	Метод openDocument() в контроллере должен устанавливать объекту класса JFileChooser в качестве фильтра объект HTMLFileFilter.
+
+•	Метод openDocument() в контроллере должен, используя метод showOpenDialog() у JFileChooser показывать диалоговое окно "Open File" для выбора файла.
+
+•	Метод openDocument() в контроллере должен установить новое значение currentFile, если пользователь подтвердит выбор файла.
+
+•	Метод openDocument() в контроллере должен сбросить документ, если пользователь подтвердит выбор файла.
+
+•	Метод openDocument() в контроллере должен устанавливать имя файла в качестве заголовка окна представления, если пользователь подтвердит выбор файла.
+
+•	Метод openDocument() в контроллере должен создавать FileReader на базе currentFile, если пользователь подтвердит выбор файла.
+
+•	Метод openDocument() в контроллере должен используя HTMLEditorKit вычитать данные из FileReader-а в документ document, если пользователь подтвердит выбор файла.
+
+•	Метод openDocument() в контроллере должен сбросить правки, если пользователь подтвердит выбор файла.
+
+•	Метод openDocument() в контроллере не должен кидать исключения, а логировать через ExceptionHandler.
 
 
 
@@ -699,6 +722,7 @@
 - Добавить возможность загрузки документа из Интернет.
 - Расширить возможности редактора (вставка картинки, ссылки и т.д.)
 Поздравляю, так держать!
+
 Требования:
-•	•
-html редактор готов!
+
+•	html редактор готов!
